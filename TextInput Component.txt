@@ -1,0 +1,20 @@
+<TextInput> კომპონენტი მომხმარებელს ტექსტის შეყვანის საშუალებას აძლევს, რაც HTML-ის input-ს ან textarea-ს ჰგავს. ის აფიქსირებს მომხმარებლის მიერ შეყვანილ მონაცემებს და შეუძლია განაახლოს მდგომარეობა (state) წერის პარალელურად:
+
+
+import { TextInput, View } from 'react-native';
+import React, { useState } from 'react';
+
+export default function TextInputExample() {
+  const [text, setText] = useState('');
+
+  return (
+    <View>
+      <TextInput
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+        value={text}
+        onChangeText={setText}
+        placeholder="ჩაწერეთ აქ..."
+      />
+    </View>
+  );
+}

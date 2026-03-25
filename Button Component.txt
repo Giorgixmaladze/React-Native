@@ -1,0 +1,44 @@
+<Button> კომპონენტი არის სტანდარტული ღილაკი. მასზე დაჭერისას შეგვიძლია გამოვიძახოთ ფუნქციები სხვადასხვა მოქმედების შესასრულებლად, როგორიცაა მონაცემების გაგზავნა, ეკრანებს შორის ნავიგაცია ან შეტყობინების (alert) ჩვენება:
+
+
+import { Button, Alert } from 'react-native';
+
+export default function ButtonExample() {
+  return (
+    <Button
+      title="დამაჭირე"
+      onPress={() => Alert.alert('ღილაკზე დაჭერილია!')}
+    />
+  );
+}
+
+
+
+onPressIn:
+
+გააქტიურდება დაუყოვნებლივ, როდესაც თითი ეკრანს შეეხება — onPress-ზე ადრე.
+
+<TouchableOpacity onPressIn={() => console.log('თითი შეეხო!')}>
+  <Text>დააჭირე</Text>
+</TouchableOpacity>
+
+
+
+
+onPress:
+
+გააქტიურდება მხოლოდ მაშინ, როდესაც თითი ეხება და ეხსნება — სრული "tap".
+
+
+<TouchableOpacity onPress={() => console.log('დაჭერილია!')}>
+  <Text>დააჭირე</Text>
+</TouchableOpacity>
+
+
+
+onPressOut:
+გააქტიურდება, როდესაც თითი ეკრანს სცილდება — onPress-ის შემდეგ ან ნაცვლად.
+
+<TouchableOpacity onPressOut={() => console.log('თითი მოიხსნა!')}>
+  <Text>დააჭირე</Text>
+</TouchableOpacity>
